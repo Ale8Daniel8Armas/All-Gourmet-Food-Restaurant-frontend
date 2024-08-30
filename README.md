@@ -1,30 +1,74 @@
-# React + TypeScript + Vite
+# Parte Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación frontend basada en React y TypeScript, construida utilizando Vite para un desarrollo y empaquetado rápido. El proyecto incorpora diversas librerías y herramientas para la autenticación, componentes de UI, manejo de formularios, gestión de estado, entre otros.
 
-Currently, two official plugins are available:
+## Tabla de Contenidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Instalación del Proyecto](#instalación-del-proyecto)
+- [Scripts Disponibles](#scripts-disponibles)
+- [Dependencias Principales](#dependencias-principales)
+- [Dependencias de Desarrollo](#dependencias-de-desarrollo)
+- [Estructura del Proyecto](#estructura-del-proyecto)
 
-## Expanding the ESLint configuration
+## Instalación del Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Para configurar el proyecto localmente, sigue estos pasos:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/usuario/nombre-repositorio.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd nombre-repositorio
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Scripts Disponibles
+
+En este proyecto, puedes utilizar los siguientes comandos:
+
+- `npm run dev`: Inicia el servidor de desarrollo utilizando Vite.
+- `npm run build`: Compila el proyecto usando TypeScript y construye los archivos optimizados para producción con Vite.
+- `npm run lint`: Ejecuta ESLint para analizar el código y asegurarse de que sigue las convenciones establecidas.
+- `npm run preview`: Previsualiza la aplicación después de la compilación de producción.
+
+## Dependencias Principales
+
+Este proyecto utiliza varias librerías para mejorar la funcionalidad y la experiencia del usuario:
+
+- React: Biblioteca para construir interfaces de usuario.
+- Auth0 React: Implementación de autenticación con Auth0.
+- React Hook Form: Manejo de formularios en React.
+- React Query: Gestión de estado y sincronización de datos.
+- React Router: Enrutador para aplicaciones React.
+- Radix UI: Componentes de UI accesibles y personalizables.
+- Tailwind CSS: Framework de CSS para el diseño rápido y responsivo.
+
+## Dependencias de Desarrollo
+
+Herramientas utilizadas durante el desarrollo del proyecto:
+
+- Vite: Herramienta rápida de desarrollo y empaquetado.
+- TypeScript: Lenguaje que añade tipos estáticos a JavaScript.
+- ESLint: Herramienta de linting para identificar y arreglar problemas en el código.
+- Tailwind CSS: Utilizado para el diseño estilístico del frontend.
+
+## Estructura del Proyecto
+
+La estructura básica del proyecto es la siguiente:
+
+```plaintext
+├── src/               # Código fuente del proyecto
+│   ├── components/    # Componentes de React
+│   ├── hooks/         # Custom hooks
+│   ├── pages/         # Páginas de la aplicación
+│   ├── styles/        # Archivos de estilo (CSS, Tailwind)
+│   └── ...            # Otros directorios y archivos
+├── public/            # Archivos estáticos
+├── package.json       # Archivo de configuración de dependencias
+└── README.md          # Este archivo
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
